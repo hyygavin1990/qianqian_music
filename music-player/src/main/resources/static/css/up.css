@@ -1,0 +1,31 @@
+#uploadSongsBox{
+margin-top:20px;margin-left:40px; height:100px;	
+}
+
+.forminput {
+	margin-top:10px;margin-left:40px;
+}
+
+.forminput input[type=text]{
+	width:150px;border: 1px solid #4F6E8D;
+}
+
+.forminput input[type=file]{
+	display: none;
+}
+
+#uploadSongsBox input[type=button]{
+	border: 1px solid #4F6E8D;
+}
+
+.fileinput{
+	color: #4F6E8D;
+}
+
+.submitButDiv{
+	margin-left:50px;'
+}
+
+.submitButDiv span{
+	margin-left:69px;
+}

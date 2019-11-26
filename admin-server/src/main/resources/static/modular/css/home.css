@@ -1,0 +1,254 @@
+.leadsInforListsBox .labelTxt {
+    width: 35%;
+    text-align: right;
+    display: inline-block;
+    margin-right: 15px;
+    color: #9b9b9b;
+    font-size: 12px;
+    font-family: "微软雅黑";
+}
+
+.shengdongMain .sdAIBoxLists .sdAIBoxWrap {
+    height: 96%;
+    width: 98%;
+    margin: 1%;
+}
+
+.shengdongMain .sdAIBoxLists .sdAIbox {
+    width: 50%;
+    padding-right: 25px;
+
+    border-right: 1px solid #ccc;
+    float: left;
+    position: relative;
+    padding-top: 28px;
+}
+.shengdongMain .sdAIBoxLists .firstTitle .userscore{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+
+.userscore .labelTxt{
+    width: 50%;
+    text-align: center;
+    margin: 10% auto;
+    /* margin: 0px 4px;*/
+
+}
+
+.shengdongMain .sdAIBoxLists .firstTitle .marking{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: right;
+    text-align: center;
+}
+.marking .labelTxt{
+    margin-left: 4%;
+}
+/*
+.marking .first{
+    position: relative;
+    width: 30%;
+
+
+}
+.marking .second ,.marking .third{
+    position: relative;
+    width: 30%;
+    height: 60%;
+    float: left;
+    margin:0px  15px;
+    padding: 8px;
+    text-align: center;
+
+    border:1px solid #ccc ;
+
+}
+*/
+
+
+.contentRight .firstTitle{
+    position: absolute;
+    width: 100%;
+    height: 7%;
+    padding: 3px;
+    border: 1px solid #ccc;
+
+}
+.contentRight .leadsSubmitMain {
+    position: absolute;
+    padding: 3px;
+    width: 49%;
+    height: 82%;
+    float: left;
+    top: 8%;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+
+    /* float: right;*/
+}
+.contentRight .otherUserInfo {
+    position: absolute;
+    padding: 3px;
+    width: 49%;
+    height: 82%;
+    top: 8%;
+    right: 0%;
+    /*left: 51%;*/
+    /*float: left;*/
+    border: 1px solid #ccc;
+    overflow-y: auto;
+
+}
+.contentRight{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: right;
+    padding: 2px;
+}
+
+.submitBtnWrapcard {
+    position: absolute;
+    width:100% ;
+    height:10% ;
+    bottom: 3%;
+    text-align: center;
+}
+
+
+.cutdownBtnBox {
+    width: 120px;
+    position: absolute;
+    right: 20px;
+    top: 0px;
+}
+
+.cutdownBtnBox .cutdownBtn {
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+    background: #fe763a;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.callLogBox {
+    width: 100%;
+}
+
+.perfectLeadsInforWin {
+    position: static;
+    display: block;
+}
+
+.userStatusBox {
+    font-size: 16px;
+    margin-left: 25px;
+    color: #fe763a;
+    vertical-align: middle;
+    border-radius: 15px; /*border: 1px solid #c0c0c0;*/
+    padding: 0 20px;
+    height: 30px;
+    display: inline-block;
+    line-height: 28px;
+}
+
+
+
+.submitBtnWrapcard span {
+    width: 120px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 4px;
+    margin: 50px 20px;;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.submitBtnWrapcard span.noeffectBtn {
+    background: grey;
+}
+
+.sdAITopWrap .userInforBox .quitBtn1 {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 28px;
+    color: #454545;
+    border-radius: 15px;
+    border: 1px solid #c0c0c0;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.form-group .control-label {
+    color: #9b9b9b;
+    padding-top: 3px;
+}
+
+.form-group .form-control {
+    height: 25px;
+}
+
+select.form-control  {
+    height: 30px !important;
+}
+
+
+
+.form-group1 {
+    height:25px;
+    margin-bottom: 5px;
+}
+
+.form-group1 .control-label {
+    color: #9b9b9b;
+    padding-top: 3px;
+}
+
+.form-group1 .form-control {
+    height: 25px;
+}
+
+.label-box {
+    min-height: 500px;
+}
+
+.label-box .form-group label {
+    font-weight: 400;
+}
+.label-box .form-group1 label {
+    font-weight: 400;
+}
+
+.pretty-border {
+    border: 1px solid #dddddd;
+}
+
+#transferid{
+    color: red;
+    font-size: 20px;
+    line-height:11px;
+}
+
+
+
+

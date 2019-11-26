@@ -1,0 +1,17 @@
+.bar {
+    margin-bottom: 10px;
+}
+
+.operate-bar .btn {
+    /*margin-right: 5px;*/
+}
+
+.control-auth {
+    display: none;
+}
+
+.jqGrid_wrapper .control-auth {
+    margin-right: 5px;
+}
+
+

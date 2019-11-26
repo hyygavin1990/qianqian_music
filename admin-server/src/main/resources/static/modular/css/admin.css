@@ -1,0 +1,96 @@
+.staffList{width: 100%;height:auto;/*border-right: 1px solid #dcdcdc;border-left:1px solid #dcdcdc;*/margin-top: 20px}
+.staffList li{width: 100%;height: auto;border-bottom: 1px solid #dcdcdc;}
+.nameList{width: 100%;height: 30px;line-height: 30px;background: #dcdcdc;color: #999;font-size: 14px;}
+.staffName{width: 20%;padding-left: 10px;}
+.staffState{width: 20%;padding-left: 10px;}
+.robNametit{width: 30%;padding-left: 10px;}
+.robStatetit{width: 30%;padding-left: 10px;}
+.staffList li .staffName{width: 15%;line-height: 30px;font-size: 14px;color: #000;height: inherit}
+.staffList li .staffState{width: 15%;line-height: 30px;font-size: 14px;color: #000;height: 100%;color: #0cd318}
+.staffList li .robState{width: 70%;line-height: 30px;font-size: 14px;color: #000;border-left: 1px solid #dcdcdc;}
+.robDetail{width: 100%;height: 30px;line-height: 30px;border-bottom: 1px solid #dcdcdc}
+.robDetail:last-child{border-bottom: none;}
+.robName{width: 50%;padding-left: 10px;}
+.robInner{width: 50%;padding-left: 10px;color: #0cd318}
+
+.staffInforLists{border-left:1px solid #ccc;width:100%;}
+.staffInforLists li{width:100%;float:left;height:auto;min-height:50px;border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+.staffInforLists li span{display: block;height:37px;line-height: 37px;}
+.staffInforLists li .robNameStatus span{display: inline-block;width: 50%;}
+.staffInforLists .staffName2{width:20%;padding-left: 10px;}
+.staffInforLists .staffState2{width:20%;padding-left: 10px;}
+.staffInforLists .robNametit2{width:60%;padding-left: 10px;}
+.staffInforLists .robStatetit2{width:30%;padding-left: 10px;}
+
+.roundStatus{width:8px;height:8px;border-radius: 50%;display: inline-block;vertical-align: middle;margin-right: 5px;}
+.roundStatus.busy{background-color: #da0f0f;}
+.roundStatus.free{background-color: #5bda0f ;}
+.roundStatus.rest{background-color: #6490f4;}
+.roundStatus.unline{background-color: #b3b3b3;}
+
+.chatList {
+    width: 100%;
+    font-family: "微软雅黑";
+}
+
+.chatdetail {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.chatUser {
+    width:7%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+}
+.chatUser .playIcon{width:18px;height: 18px;display: inline-block;vertical-align: middle;margin-right:5px;background: url(../images/admin/playIcon.png) no-repeat;}
+.chatUser .playIcon.pauseIcon{background: url(../images/admin/pauseIcon.png) no-repeat;}
+.chatUser .name{text-align: right;display: inline-block;}
+
+.chatDetial {
+    width: 80%;
+    line-height: 20px;
+}
+
+.chatdetail.staffV {
+    color: #ec4844
+}
+
+.chatdetail.userV {
+    color: #0099FF
+}
+
+.chatdetail.customerV {
+    color: #6490f4
+}
+
+.chatVoice {
+    width: 5%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 20px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.page-content .bar {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.search-bar {
+    padding: 10px 20px 5px 12px;
+    /*border: 1px solid #dddddd;*/
+    /*border-radius: 4px;*/
+}
+
+.search-bar label {
+    padding-right: 10px;
+}
+
+.search-bar .count-info {
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right:10px;
+}

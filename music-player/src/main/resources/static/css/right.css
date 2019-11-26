@@ -1,0 +1,76 @@
+body {
+	font-size: 13px;
+	font-family: sans-serif;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	margin:0;padding:0;
+	background-color: #FBFBFB;
+}
+#rightnav > span {
+	width: 12.5%;
+	height: 40px;
+	line-height: 40px;
+	background-color: white; display : block;
+	float: left;
+	text-align: center;
+	display: block;
+	border-bottom: 1px  dashed gray;
+
+}
+
+#rightnav > span:hover {
+	background-color: green;
+	cursor: pointer;
+}
+
+#rightheader {
+	background-color: rgb(79, 110, 141);
+	width: inherit;
+	height: 30px;
+	line-height: 30px;
+	text-align:right;
+	padding-right:10px;
+	color:white;
+}
+#rightheader >span:hover{
+	cursor:pointer;
+}
+#baidulogo{
+	height:200px;
+	width: inherit;
+	text-align: center;
+	line-height: 200px;
+}
+
+.searchlistonpage {
+	list-style: inside;
+	list-style-type: none;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 0px;
+	font-size: 14px;
+	text-align:left;
+	width:90%;
+	border-bottom: 1px  dotted  gray;
+	line-height:150%;
+}
+
+.rightbutton{
+	border:1px solid gray;
+	margin-left:1px;
+}
+.rightbutton:hover{
+	background:#cccccc;
+}
+
+.searchlist {
+	list-style: inside;
+	list-style-type: none;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 0px;
+	font-size: 14px;
+	text-align:left;
+	width:100%;
+
+}

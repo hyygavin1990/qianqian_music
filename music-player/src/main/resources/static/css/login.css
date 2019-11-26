@@ -1,0 +1,25 @@
+.formbox{
+	margin-top:200px;margin-left:20%; height:100px;
+}
+
+.formbox > div{
+	margin-top:10px;margin-left:40px;
+}
+
+.formbox input[type='text'],input[type='password']{
+	width:150px;border: 1px solid #4F6E8D;height:18px;
+}
+
+#verifyimg{
+	float:right;margin-right:112px;
+}
+
+.submitBox{
+	margin-left:50px;
+}
+
+.submitBox input[type="button"]{
+
+	border: 1px solid #4F6E8D;
+}
+

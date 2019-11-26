@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: admin-server
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        shared-dataids: mysql.yaml,mongo.yaml,redis.yaml
+#        refreshable-dataids: mysql.yaml,mongo.yaml,redis.yaml
+server.port: 8888
