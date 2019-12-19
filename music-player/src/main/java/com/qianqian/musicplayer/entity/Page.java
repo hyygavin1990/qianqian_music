@@ -1,6 +1,6 @@
-package com.qianqian.entity;
+package com.qianqian.musicplayer.entity;
 
-import com.qianqian.util.SpringContextUtil;
+import com.qianqian.musicplayer.util.SpringContextUtil;
 
 import java.util.Date;
 

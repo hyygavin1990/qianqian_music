@@ -1,4 +1,4 @@
-package com.qianqian.constant;
+package com.qianqian.musicplayer.constant;
 
 import java.util.HashMap;
 import java.util.Map;

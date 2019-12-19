@@ -1,4 +1,4 @@
-package com.qianqian.mongodb;
+package com.qianqian.musicplayer.mongodb;
 
 import org.bson.Document;
 

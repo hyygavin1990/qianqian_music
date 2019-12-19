@@ -1,4 +1,4 @@
-package com.qianqian.entity;
+package com.qianqian.musicplayer.entity;
 
 import lombok.Data;
 

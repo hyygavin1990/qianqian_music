@@ -1,4 +1,4 @@
-package com.qianqian.service;
+package com.qianqian.musicplayer.service;
 
 import org.springframework.stereotype.Service;
 

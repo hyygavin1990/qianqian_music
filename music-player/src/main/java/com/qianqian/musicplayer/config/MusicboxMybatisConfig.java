@@ -1,4 +1,4 @@
-package com.qianqian.config;
+package com.qianqian.musicplayer.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -64,7 +64,7 @@ public class MusicboxMybatisConfig {
     @Bean(name = "musicboxConfigurer")
     public static MapperScannerConfigurer mapperScannerConfigurer(){
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
-        mapperScannerConfigurer.setBasePackage("cn.qianqian.dao.mysql.musicbox");
+        mapperScannerConfigurer.setBasePackage("cn.qianqian.musicplayer.dao.mysql.musicbox");
         Properties propertiesMapper = new Properties();
         //通用mapper位置，不要和其他mapper、dao放在同一个目录
         propertiesMapper.setProperty("mappers", "tk.mybatis.mapper.common.Mapper,tk.mybatis.mapper.common.special.InsertListMapper");

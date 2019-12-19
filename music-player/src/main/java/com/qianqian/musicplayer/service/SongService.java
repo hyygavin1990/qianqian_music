@@ -1,10 +1,10 @@
-package com.qianqian.service;
+package com.qianqian.musicplayer.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.qianqian.dao.mysql.musicbox.SongDao;
-import com.qianqian.entity.Page;
 import com.qianqian.entity.mysql.player.Song;
+import com.qianqian.musicplayer.dao.mysql.musicbox.SongDao;
+import com.qianqian.musicplayer.entity.Page;
 import jodd.util.StringUtil;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;

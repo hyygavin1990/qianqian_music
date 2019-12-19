@@ -1,4 +1,4 @@
-package com.qianqian.mongodb;
+package com.qianqian.musicplayer.mongodb;
 
 import com.mongodb.client.*;
 import com.mongodb.client.result.UpdateResult;

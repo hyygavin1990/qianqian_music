@@ -1,4 +1,4 @@
-package com.qianqian.util;
+package com.qianqian.musicplayer.util;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

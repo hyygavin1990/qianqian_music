@@ -1,4 +1,4 @@
-package com.qianqian.entity;
+package com.qianqian.musicplayer.entity;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

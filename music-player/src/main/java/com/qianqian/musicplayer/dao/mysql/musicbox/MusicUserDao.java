@@ -1,14 +1,7 @@
-package com.qianqian.dao.mysql.musicbox;
+package com.qianqian.musicplayer.dao.mysql.musicbox;
 
-import com.qianqian.dao.mysql.BaseDao;
-import com.qianqian.entity.mysql.oauth.User;
 import com.qianqian.entity.mysql.player.MusicUser;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Component;
-
-import java.util.List;
-import java.util.Map;
+import com.qianqian.musicplayer.dao.mysql.BaseDao;
 
 /**
  * @author fonlin

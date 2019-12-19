@@ -1,8 +1,8 @@
-package com.qianqian.controller;
+package com.qianqian.musicplayer.controller;
 
-import com.qianqian.entity.Page;
 import com.qianqian.entity.mysql.player.Song;
-import com.qianqian.service.SongService;
+import com.qianqian.musicplayer.entity.Page;
+import com.qianqian.musicplayer.service.SongService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,7 +1,7 @@
-package com.qianqian.service;
+package com.qianqian.musicplayer.service;
 
-import com.qianqian.dao.mysql.BaseDao;
 import com.qianqian.entity.BaseEntity;
+import com.qianqian.musicplayer.dao.mysql.BaseDao;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;

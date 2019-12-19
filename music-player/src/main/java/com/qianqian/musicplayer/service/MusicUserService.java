@@ -1,9 +1,9 @@
-package com.qianqian.service;
+package com.qianqian.musicplayer.service;
 
 import com.alibaba.fastjson.JSONObject;
-import com.qianqian.dao.mysql.musicbox.MusicUserDao;
-import com.qianqian.entity.LoginInfo;
 import com.qianqian.entity.mysql.player.MusicUser;
+import com.qianqian.musicplayer.dao.mysql.musicbox.MusicUserDao;
+import com.qianqian.musicplayer.entity.LoginInfo;
 import com.qianqian.util.security.MD5Util;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -13,8 +13,9 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import static com.qianqian.constant.Constants.LOGIN_SESSION_COOKIE_NAME;
-import static com.qianqian.constant.Constants.LOGIN_SESSION_NAME;
+import static com.qianqian.musicplayer.constant.Constants.LOGIN_SESSION_COOKIE_NAME;
+import static com.qianqian.musicplayer.constant.Constants.LOGIN_SESSION_NAME;
+
 
 /**
  * Created by hyygavin on 2017/11/15.

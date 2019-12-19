@@ -1,4 +1,4 @@
-package com.qianqian.dao.mongodb.log;
+package com.qianqian.musicplayer.dao.mongodb.log;
 
 import com.qianqian.entity.mongodb.log.LoginLog;
 import org.springframework.data.mongodb.repository.MongoRepository;

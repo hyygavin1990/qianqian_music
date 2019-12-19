@@ -1,4 +1,4 @@
-package com.qianqian.controller;
+package com.qianqian.musicplayer.controller;
 
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import com.qianqian.util.security.MD5Util;

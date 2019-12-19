@@ -1,7 +1,7 @@
-package com.qianqian.controller;
+package com.qianqian.musicplayer.controller;
 
 import com.qianqian.entity.mysql.player.MusicUser;
-import com.qianqian.service.MusicUserService;
+import com.qianqian.musicplayer.service.MusicUserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

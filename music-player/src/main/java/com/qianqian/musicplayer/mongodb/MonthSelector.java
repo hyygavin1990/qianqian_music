@@ -1,4 +1,4 @@
-package com.qianqian.mongodb;
+package com.qianqian.musicplayer.mongodb;
 
 import com.qianqian.util.dateutil.DateFormat;
 import org.springframework.util.Assert;

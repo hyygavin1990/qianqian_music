@@ -1,8 +1,8 @@
-package com.qianqian.config;
+package com.qianqian.musicplayer.config;
 
 import com.mongodb.MongoClient;
-import com.qianqian.mongodb.MongoHelper;
-import com.qianqian.mongodb.MonthlyMongoDbFactory;
+import com.qianqian.musicplayer.mongodb.MongoHelper;
+import com.qianqian.musicplayer.mongodb.MonthlyMongoDbFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
@@ -26,7 +26,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 //禁用spring boot的自动配置
 @EnableAutoConfiguration(exclude={MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
 //激活@Repository注解，并且设置dao扫描包
-@EnableMongoRepositories(basePackages = "com.qianqian.dao.mongodb.log", mongoTemplateRef = "logMongoHelper")
+@EnableMongoRepositories(basePackages = "com.qianqian.musicplayer.dao.mongodb.log", mongoTemplateRef = "logMongoHelper")
 public class LogMongoDbConfig {
 
     @Bean(name = "logMongoProperties")

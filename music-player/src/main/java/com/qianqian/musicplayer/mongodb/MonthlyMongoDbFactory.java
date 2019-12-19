@@ -1,9 +1,9 @@
-package com.qianqian.mongodb;
+package com.qianqian.musicplayer.mongodb;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoDatabase;
-import com.qianqian.constant.Constants;
+import com.qianqian.musicplayer.constant.Constants;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;

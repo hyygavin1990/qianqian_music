@@ -1,4 +1,4 @@
-package com.qianqian.dao.mysql;
+package com.qianqian.musicplayer.dao.mysql;
 
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;

@@ -1,8 +1,8 @@
-package com.qianqian.controller;
+package com.qianqian.musicplayer.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.qianqian.entity.LoginInfo;
-import com.qianqian.service.MusicUserService;
+import com.qianqian.musicplayer.entity.LoginInfo;
+import com.qianqian.musicplayer.service.MusicUserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

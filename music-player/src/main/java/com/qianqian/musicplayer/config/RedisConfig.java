@@ -1,4 +1,4 @@
-package com.qianqian.config;
+package com.qianqian.musicplayer.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

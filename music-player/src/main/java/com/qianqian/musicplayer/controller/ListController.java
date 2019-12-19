@@ -1,4 +1,4 @@
-package com.qianqian.controller;
+package com.qianqian.musicplayer.controller;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -16,7 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.qianqian.constant.Constants.LOGIN_SESSION_NAME;
+import static com.qianqian.musicplayer.constant.Constants.LOGIN_SESSION_NAME;
+
 
 /**
  * Created by hyygavin on 2017/11/8.
