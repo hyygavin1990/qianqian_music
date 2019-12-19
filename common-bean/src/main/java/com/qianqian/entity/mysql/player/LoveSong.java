@@ -4,6 +4,7 @@ import com.qianqian.entity.BaseEntity;
 import lombok.Data;
 
 /**
+ * 喜爱歌曲
  * Created by hyygavin on 2019/5/7.
  */
 @Data
