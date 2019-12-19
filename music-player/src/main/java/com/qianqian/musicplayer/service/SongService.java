@@ -1,9 +1,13 @@
 package com.qianqian.service;
 
-import com.qianqian.dao.mysql.first.SongDao;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.qianqian.dao.mysql.musicbox.SongDao;
 import com.qianqian.entity.Page;
 import com.qianqian.entity.mysql.player.Song;
+import jodd.util.StringUtil;
 import org.springframework.stereotype.Service;
+import tk.mybatis.mapper.entity.Example;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -17,7 +21,7 @@ public class SongService {
     private SongDao songDao;
 
     public List<Song> searchSongsForList(String searchcontext, Page page){
-        /*PageHelper.startPage(page.getNowPage(), page.getRollPage());
+        PageHelper.startPage(page.getNowPage(), page.getRollPage());
         Example example = new Example(Song.class);
         if(StringUtil.isNotBlank(searchcontext)){
             example.createCriteria().orLike("name","%"+searchcontext+"%");
@@ -26,8 +30,8 @@ public class SongService {
         PageInfo<Song> pageInfo = new PageInfo<>(list);
         long totalCount = pageInfo.getTotal();
         page.setTotalRows((int) totalCount);
-        page.calculate();*/
-        return null;
+        page.calculate();
+        return list;
     }
 
     /*

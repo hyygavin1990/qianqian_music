@@ -25,9 +25,6 @@ import static com.qianqian.constant.Constants.LOGIN_SESSION_NAME;
 @RequestMapping("/list")
 public class ListController {
 
-
-
-
     @ResponseBody
     @RequestMapping("/loadlists")
     public JSONArray loadlists(HttpServletRequest request){

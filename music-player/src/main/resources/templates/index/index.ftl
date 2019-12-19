@@ -10,8 +10,8 @@
 <link rel="shortcut icon" href="/static/images/music.ico" type="image/vnd.microsoft.icon">
 <link rel="stylesheet" type="text/css" href="/static/css/style.css" >
 <link rel="stylesheet" type="text/css" href="/static/css/plugins/sweetalert/sweetalert2.min.css" >
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/static/js/plugins/vue/vue.js"></script>
+<script src="/static/js/plugins/vue/axios.min.js"></script>
 <#--sweet alert-->
 <script type="text/javascript" src="/static/js/plugins/sweetalert/sweetalert2.js"></script>
 <script type="text/javascript" src="/static/js/plugins/sweetalert/core.js"></script>
@@ -67,19 +67,16 @@
             <button id="addnewlist" @click="addNewList()">
                 新建列表
             </button>
-            <button>
-                清空列表
-            </button>
             <button id="removeListFromMenu">
                 删除列表
-            </button>
-            <button id="uploadsong">
-                本地上传
             </button>
         </div>
 
         <div id="musiclistmemo">
-            <ul><li id="list0" class="isplay">临时列表<input type="hidden" value="list"><input type="hidden" value=""><input type="hidden" value="0"><input type="hidden" value="undefined"></li></ul>
+            <ul><music-list-item v-for="(item,index) in musicLists"
+                                 v-bind:item="item"
+                                 v-bind:index="index"
+                                 v-bind:key="item.id"></music-list-item></ul>
         </div>
         <#--<ul id="musiclist">还未加入歌曲</ul>-->
         <ul id="musiclist" v-cloak>

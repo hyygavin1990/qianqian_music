@@ -1,12 +1,10 @@
 package com.qianqian.service;
 
 import com.alibaba.fastjson.JSONObject;
-import com.qianqian.dao.mysql.BaseDao;
-import com.qianqian.dao.mysql.first.MusicUserDao;
+import com.qianqian.dao.mysql.musicbox.MusicUserDao;
 import com.qianqian.entity.LoginInfo;
 import com.qianqian.entity.mysql.player.MusicUser;
 import com.qianqian.util.security.MD5Util;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -14,7 +12,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.List;
 
 import static com.qianqian.constant.Constants.LOGIN_SESSION_COOKIE_NAME;
 import static com.qianqian.constant.Constants.LOGIN_SESSION_NAME;

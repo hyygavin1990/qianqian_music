@@ -13,7 +13,17 @@ Vue.component('music-item', {
 
 
 });
+Vue.component('music-list-item', {
+    // music-item 组件现在接受一个
+    // "prop"，类似于一个自定义特性。
+    // 这个 prop 名为 todo。
+    props: ['item','index'],
+    template: '<li v-bind:title="item.name"  ><span>{{ item.name }}</span>' +
+    '</li>'
+    // '<span class="icn icn-share" title="分享">分享</span>'+
 
+
+});
 /**
  var musicFiles = [];//存放音乐文件变量
  var $media;//audio标签
@@ -83,14 +93,9 @@ var player = new Vue({
             method:'post',
             url:'/list/loadlists'
         }).then(function(res){
-
-            var list =  res.data.data;
-            for (var i = 0; i < list.length; i++) {
-                var obj = list[i];
-                obj.isplay = i==0?1:0;
-            }
-            _this.musicFiles =list;
-            _this.$options.methods.playMusic(0);
+            console.log(res);
+            _this.musicLists =res.data;
+            // _this.$options.methods.playMusic(0);
 
         });
     },
