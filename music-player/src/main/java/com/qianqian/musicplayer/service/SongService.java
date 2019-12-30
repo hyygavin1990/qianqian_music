@@ -7,11 +7,14 @@ import com.qianqian.musicplayer.dao.mysql.musicbox.SongDao;
 import com.qianqian.musicplayer.entity.Page;
 import jodd.util.StringUtil;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 import tk.mybatis.mapper.entity.Example;
 
 import javax.annotation.Resource;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * Created by hyygavin on 2017/11/15.
@@ -34,6 +37,12 @@ public class SongService {
         page.setTotalRows((int) totalCount);
         page.calculate();
         return list;
+    }
+
+    public List<Map> getListByIds(List<String> ids) {
+        if(CollectionUtils.isEmpty(ids)) return Collections.emptyList();
+        String sql = " T1.id IN ("+String.join(",",ids)+")";
+        return songDao.getList(sql);
     }
 
     /*

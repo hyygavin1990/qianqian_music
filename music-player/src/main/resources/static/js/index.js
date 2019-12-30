@@ -89,17 +89,35 @@ var player = new Vue({
         };
         var _this= this;
         _this.media = document.getElementById("musicbox");
-        axios({
-            method:'post',
-            url:'/list/loadlists'
-        }).then(function(res){
-            console.log(res);
-            _this.musicLists =res.data;
-            // _this.$options.methods.playMusic(0);
-
-        });
+        _this.$options.methods.loadLists();
     },
     methods:{
+        loadLists:function () {
+            axios({
+                method:'post',
+                url:'/list/loadlists'
+            }).then(function(res){
+                player.musicLists =res.data;
+                if(player.musicLists.length>0){
+                    player.$options.methods.loadSongsByIds(res.data[0].value);
+                }
+            });
+        },
+        loadSongsByIds:function (ids) {
+            if(ids=="") return;
+            axios({
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method:'post',
+                url:'/song/loadSongsByIds',
+                data:ids.split(",")
+            }).then(function(res){
+                player.musicFiles =res.data;
+                // player.$options.methods.playMusic(0);
+
+            });
+        },
         playMusic:function (index) {
             clearTimeout(player.autoTimeout);
             player.playingFile = player.musicFiles[index];

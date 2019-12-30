@@ -3,13 +3,20 @@ package com.qianqian.musicplayer.controller;
 import com.qianqian.entity.mysql.player.Song;
 import com.qianqian.musicplayer.entity.Page;
 import com.qianqian.musicplayer.service.SongService;
+import jodd.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -22,6 +29,15 @@ public class SongController {
 
     @Autowired
     private SongService songService;
+
+
+    @ResponseBody
+    @PostMapping("/loadSongsByIds")
+    public List<Map> loadSongsByIds(@RequestBody List<String> ids) {
+       return songService.getListByIds(ids);
+    }
+
+
 
     @ResponseBody
     @RequestMapping("/searchSongsForSuggestion")
@@ -51,8 +67,7 @@ public class SongController {
 
     }
 
-    /*@Resource
-    private SongService songService;
+
     @PostMapping("/addSongsFromSearch")
     public void addSongsFromSearch(HttpServletRequest request, HttpServletResponse response, String songids) {
         Cookie[] cookies = request.getCookies();
@@ -63,7 +78,7 @@ public class SongController {
                 break;
             }
         }
-        if(StringUtils.hasLength(templist)){
+        if(StringUtil.isNotBlank(templist)){
             templist+="#"+songids;
         }else{
             templist = songids;
@@ -74,6 +89,7 @@ public class SongController {
         response.addCookie(cookie);
     }
 
+    /*@Resource
     @RequestMapping("/addSongsToMylove")
     public void addSongsToMylove(HttpServletRequest request, HttpServletResponse response, String songids){
         User user = (User) request.getSession().getAttribute("musicuser");

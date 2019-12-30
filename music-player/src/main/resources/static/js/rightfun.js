@@ -200,10 +200,10 @@ function checkbox_play_ini(){
             },
             url: '/song/addSongsFromSearch',
             success: function(){
-                // parent.leftarea_ini(0);
-                // parent.musicIndex = parent.musicFiles.length - 1;
-                // parent.musicSelectedIndex = -1;
-                // parent.playMusic(parent.musicIndex);
+                parent.player.$options.methods.loadLists();
+                parent.player.musicIndex = parent.player.musicFiles.length - 1;
+                parent.player.musicSelectedIndex = -1;
+                // parent.player.$options.methods.playMusic(parent.player.musicIndex);
             },
             dataType: 'text'
         })
