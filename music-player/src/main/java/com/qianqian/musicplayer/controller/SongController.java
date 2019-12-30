@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by hyygavin on 2017/11/8.
@@ -24,7 +25,7 @@ public class SongController {
 
     @ResponseBody
     @RequestMapping("/searchSongsForSuggestion")
-    public List<Song> searchSongsForSuggestion(HttpServletRequest request, String searchText) {
+    public List<Map> searchSongsForSuggestion(HttpServletRequest request, String searchText) {
         StringBuffer url = request.getRequestURL();
         Page page =new Page(7 ,"&searchcontext="+searchText, url.toString(),"",1);
         return  songService.searchSongsForList(searchText, page);
@@ -43,7 +44,7 @@ public class SongController {
         if(searchcontext.equals("%")) searchcontext="";
 
         Page page =new Page(pagesize ,"&searchcontext="+searchcontext, url.toString(),"",pageno);
-        List<Song> musiclist = songService.searchSongsForList(searchcontext, page);
+        List<Map> musiclist = songService.searchSongsForList(searchcontext, page);
         model.addAttribute("musiclist",musiclist);// 赋值分页输出
         model.addAttribute("page",page.show());// 赋值分页输出
         return "index/right_search";

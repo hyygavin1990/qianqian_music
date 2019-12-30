@@ -11,6 +11,7 @@ import tk.mybatis.mapper.entity.Example;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by hyygavin on 2017/11/15.
@@ -20,14 +21,15 @@ public class SongService {
     @Resource
     private SongDao songDao;
 
-    public List<Song> searchSongsForList(String searchcontext, Page page){
+    public List<Map> searchSongsForList(String searchcontext, Page page){
         PageHelper.startPage(page.getNowPage(), page.getRollPage());
-        Example example = new Example(Song.class);
+        String sql = "1=1";
         if(StringUtil.isNotBlank(searchcontext)){
-            example.createCriteria().orLike("name","%"+searchcontext+"%");
+            sql += " AND (T1.`name` LIKE '%"+searchcontext+"%' OR T3.`name` LIKE '%"+searchcontext+"%')";
+
         }
-        List<Song> list = songDao.selectByExample(example);
-        PageInfo<Song> pageInfo = new PageInfo<>(list);
+        List<Map> list = songDao.getList(sql);
+        PageInfo<Map> pageInfo = new PageInfo<>(list);
         long totalCount = pageInfo.getTotal();
         page.setTotalRows((int) totalCount);
         page.calculate();

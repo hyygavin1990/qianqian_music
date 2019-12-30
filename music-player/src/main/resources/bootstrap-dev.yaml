@@ -1,13 +1,44 @@
 spring:
   application:
     name: music-player
-  cloud:
-    nacos:
-      config:
-        server-addr: 127.0.0.1:8848
-        file-extension: yaml
-        shared-dataids: mysql.yaml,mongo.yaml,redis.yaml
-#        refreshable-dataids: mysql.yaml,mongo.yaml,redis.yaml
+  data:
+    mongodb:
+      master:
+        database: qianqian_music
+        uri: mongodb://admin:1q2w3e4r@localhost:27017/admin
+      log:
+        database: qianqian_music_log
+        uri: mongodb://admin:1q2w3e4r@localhost:27017/admin
+server.port: 8881
+spring.mvc.static-path-pattern: /static/**
+
+pageconfig:
+  header: '条记录'
+  prev: "上一页"
+  next: "下一页"
+  first: "第一页"
+  last: "最后一页"
+  theme: "%totalRow% %header% %nowPage%/%totalPage% 页 %upPage% %downPage% %first%  %prePage%  %linkPage%  %nextPage% %end%"
+
+musicbox:
+  datasource:
+    min-idle: 5
+    test-while-idle: true
+    time-between-eviction-runs-millis: 18800
+    validation-query: select 1
+    max-wait: 10000
+    separator: ;
+    platform: mysql
+    url: jdbc:mysql://localhost:3306/qianqian_music?useUnicode=true&characterEncoding=utf8
+    continueOnError: false
+    max-idle: 10
+    username: root
+    password: '`1qazx'
+    test-on-borrow: false
+    sql-script-encoding: utf-8
+    name: datasource
+    initial-size: 5
+    driver-class-name: com.mysql.jdbc.Driver
 
 
 

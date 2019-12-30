@@ -115,12 +115,6 @@
 			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
 		</dependency>
 
-		<!-- nacos -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-		</dependency>
-
 		<!-- lang3工具包 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>

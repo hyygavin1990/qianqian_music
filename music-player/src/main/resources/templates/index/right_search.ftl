@@ -53,7 +53,7 @@
             <#list musiclist as song>
                 <li id="0" class="searchlistonpage">
                     <input type="checkbox" style="height:20px"/><span style="width:250px; display:inline-block;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow: hidden;">${song.name}</span>
-                    <span style="width:150px;display:inline-block; white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow: hidden;">${song.name}</span>
+                    <span style="width:150px;display:inline-block; white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow: hidden;">${song.author}</span>
                     <span style="display:none;">${song.id}</span>
                 </li>
             </#list>

@@ -1,6 +1,4 @@
 
-var arr = new Array();
-var listTime;
 var timeoutId;
 var highlightindex = -1;
 var cuval = "";
@@ -26,9 +24,8 @@ function ajax_searchsongs(text){
                 data: {
                     searchText: text
                 },
-                url: APP+'/Song/searchSongsForSuggestion',
+                url: '/song/searchSongsForSuggestion',
                 success: function(data){
-                    //alert(data);
                     $("#sea").css("display", "none");
                     if (data != null) {
                         $("#sea").css("display", "block");
@@ -75,7 +72,6 @@ function ajax_searchsongs(text){
         }
     }, 500);
 }
-
 
 //实现搜索框的suggestion功能
 function searchsongs_event_ini(){
@@ -154,8 +150,7 @@ function searchsongs_event_ini(){
                     $("#searchsongs").val(ulNodes.eq(highlightindex).text().trim());
                 }
             }
-        
-        
+
     })
     $("#searchsongs").focus(function(event){
         var v1 = $(this).val();
@@ -178,7 +173,7 @@ function checkbox_play_ini(){
     $(".searchlistonpage input[type='checkbox']:gt(0)").click(function(){
         $(".searchlistonpage input:eq(0)").attr("checked", $(".searchlistonpage input[type='checkbox']:gt(0)").length ==
         $(".searchlistonpage input:gt(0)[type='checkbox']:checked").length);
-    })
+    });
     $(".searchlistonpage input:eq(0)").click(function(){
         if ($(this).attr("checked") == "checked") {
             $(".searchlistonpage input:gt(0)").attr("checked", "checked");
@@ -186,7 +181,7 @@ function checkbox_play_ini(){
         else {
             $(".searchlistonpage input:gt(0)").removeAttr("checked");
         }
-    })
+    });
     
     //实现播放功能
     $(".searchlistonpage input[type='button']:eq(0)").click(function(){
@@ -195,7 +190,7 @@ function checkbox_play_ini(){
             if ($(".searchlistonpage input[type='checkbox']:eq(" + (n + 1) + ")").attr("checked") == "checked") {
                 ids += $(this).html() + ",";
             }
-        })
+        });
         ids = ids.substring(0, ids.length - 1);
 		if(ids!=null&&ids!=""){
 			$.ajax({
@@ -203,18 +198,18 @@ function checkbox_play_ini(){
             data: {
                 songids: ids
             },
-            url: APP+'/Song/addSongsFromSearch',
+            url: '/song/addSongsFromSearch',
             success: function(){
-                parent.leftarea_ini(0);
-                parent.musicIndex = parent.musicFiles.length - 1;
-                parent.musicSelectedIndex = -1;
-                parent.playMusic(parent.musicIndex);
+                // parent.leftarea_ini(0);
+                // parent.musicIndex = parent.musicFiles.length - 1;
+                // parent.musicSelectedIndex = -1;
+                // parent.playMusic(parent.musicIndex);
             },
             dataType: 'text'
         })
 		}
         
-    })
+    });
 
     //实现收藏到我喜欢听列表中
     $(".searchlistonpage input[type='button']:eq(2)").click(function(){
@@ -223,7 +218,7 @@ function checkbox_play_ini(){
             if ($(".searchlistonpage input[type='checkbox']:eq(" + (n + 1) + ")").attr("checked") == "checked") {
                 ids += $(this).html() + ",";
             }
-        })
+        });
         ids = ids.substring(0, ids.length - 1);
         if(ids!=null&&ids!=""){
             $.ajax({
@@ -231,12 +226,12 @@ function checkbox_play_ini(){
             data: {
                 songids: ids
             },
-            url: APP+'/Song/addSongsToMylove',
+            url: '/Song/addSongsToMylove',
             success: function(){
-                parent.leftarea_ini(1);
-                parent.musicIndex = parent.musicFiles.length - 1;
-                parent.musicSelectedIndex = -1;
-                parent.playMusic(parent.musicIndex);
+                // parent.leftarea_ini(1);
+                // parent.musicIndex = parent.musicFiles.length - 1;
+                // parent.musicSelectedIndex = -1;
+                // parent.playMusic(parent.musicIndex);
             },
             dataType: 'text'
         })
