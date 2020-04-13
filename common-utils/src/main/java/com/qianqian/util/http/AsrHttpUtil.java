@@ -483,8 +483,6 @@ public class AsrHttpUtil {
     }
 
     public static void main(String[] args) {
-//        System.out.println( AsrHttpUtil.sendDelete("https://nlsapi.aliyun.com/asr/custom/vocabs/0786e88c8dbc4f8ba5287a7e4c5ab177","LTAIqVuwcq6CUxpY","h6iBcxQVzuBmTt3M5NwETDCT71RLVQ"));
-        System.out.println(AsrHttpUtil.sendGet("https://nlsapi.aliyun.com/asr/custom/vocabs/044b8695228f4fe7b9de77d6461a2432","LTAIqVuwcq6CUxpY","h6iBcxQVzuBmTt3M5NwETDCT71RLVQ"));
     }
 
 }
